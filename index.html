@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swipe Puzzle 2026</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- SPLASH SCREEN -->
+    <div id="splash" class="splash-screen">
+      <h1 class="splash-title">Swipe Puzzle 2026</h1>
+    </div>
+
+    <div class="app">
+      <!-- HEADER -->
+      <header class="app-header">
+        <div class="logo">
+          <span class="logo-main">Swipe Puzzle</span>
+          <span class="logo-year">2026</span>
+        </div>
+        <div class="badge">Infinite Levels</div>
+      </header>
+
+      <!-- HUD -->
+      <section class="hud">
+        <div class="hud-item">
+          <span class="hud-label">Level</span>
+          <span class="hud-value" id="levelDisplay">1</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Moves</span>
+          <span class="hud-value" id="movesDisplay">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Time</span>
+          <span class="hud-value" id="timeDisplay">0s</span>
+        </div>
+      </section>
+
+      <!-- MAIN CONTENT -->
+      <main class="main">
+        <div class="board-wrapper">
+          <div id="board" class="board"></div>
+        </div>
+
+        <aside class="side-panel">
+          <!-- MENU CARD -->
+          <div class="card menu-card">
+            <h2>Main Menu</h2>
+            <p class="subtitle">Relaxing, infinite swipe puzzle.</p>
+
+            <button id="shuffleBtn" class="btn ghost-btn" disabled>
+              Shuffle Again
+            </button>
+          </div>
+
+          <!-- HOW TO PLAY -->
+          <div class="card info-card">
+            <div class="info-header">
+              <h3>How to play</h3>
+              <button id="toggleHowToBtn" class="link-btn">Show</button>
+            </div>
+            <div id="howToContent" class="info-content collapsed">
+              <ul>
+                <li>Tap or swipe tiles next to the empty space.</li>
+                <li>Reorder tiles in ascending order.</li>
+                <li>Levels get harder automatically.</li>
+                <li>Difficulty is chosen only at game start.</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <!-- LEVEL COMPLETE OVERLAY -->
+      <div id="levelOverlay" class="overlay hidden">
+        <div class="overlay-content">
+          <h2>Level Complete!</h2>
+          <p id="overlayStats"></p>
+          <button id="nextLevelBtn" class="btn primary-btn">Next Level</button>
+        </div>
+      </div>
+
+      <!-- START MENU OVERLAY -->
+      <div id="startOverlay" class="overlay">
+        <div class="overlay-content start-overlay">
+          <h1>Swipe Puzzle 2026</h1>
+          <p class="start-subtitle">Choose difficulty and begin.</p>
+
+          <!-- DIFFICULTY -->
+          <div class="difficulty-group">
+            <label class="difficulty-option">
+              <input type="radio" name="difficulty" value="3" checked />
+              <span>Easy (3×3)</span>
+            </label>
+
+            <label class="difficulty-option">
+              <input type="radio" name="difficulty" value="4" />
+              <span>Medium (4×4)</span>
+            </label>
+
+            <label class="difficulty-option">
+              <input type="radio" name="difficulty" value="5" />
+              <span>Hard (5×5)</span>
+            </label>
+          </div>
+
+          <button id="startGameBtn" class="btn primary-btn">Start Game</button>
+          <button id="toggleSoundBtn" class="btn ghost-btn">Sound: On</button>
+        </div>
+      </div>
+
+      <footer class="app-footer">Swipe Puzzle 2026 · HTML · CSS · JS</footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
